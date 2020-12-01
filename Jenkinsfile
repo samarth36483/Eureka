@@ -30,7 +30,7 @@ node
       docker.withRegistry('https://hybridcloudaccelerators.azurecr.io', 'hybrid-cloud-accelerators-acr') {
         	def customImage = docker.build("hybridcloudaccelerators.azurecr.io/eurekaservicemanagement:${commit_id}")
         	/* Push the container to the custom Registry */
-		echo "Pushing Docker Container to Private Registry..."
+		/*echo "Pushing Docker Container to Private Registry..."
         	customImage.push()
 			sh "docker rmi -f hybridcloudaccelerators.azurecr.io/eurekaservicemanagement:${commit_id}"
 	}
