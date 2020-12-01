@@ -38,13 +38,13 @@ node
     }
 	
 	 
-	 stage('Kubernetes Prod Deployment'){
+	 /*stage('Kubernetes Prod Deployment'){
 	 withKubeConfig([credentialsId: 'testkube']) {
-      /*sh "sed 's/\$COMMIT/${commit_id}/g' ${DEPLOY_YAML_FILE} | kubectl apply -f - -n hca-prod "
+      sh "sed 's/\$COMMIT/${commit_id}/g' ${DEPLOY_YAML_FILE} | kubectl apply -f - -n hca-prod "
 	 }
-	 }
+	 }*/
   stage('send success notification') {
-	currentBuild.result = 'SUCCESS'*/
+	currentBuild.result = 'SUCCESS'
   }
   } 
   catch (err) {	
