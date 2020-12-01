@@ -25,7 +25,7 @@ node
       sh 'mvn clean install -Dmaven.test.skip=true' 	  
     }
 	  
-    stage('docker publish') {
+    /*stage('docker publish') {
       echo "creating docker container..."
       docker.withRegistry('https://hybridcloudaccelerators.azurecr.io', 'hybrid-cloud-accelerators-acr') {
         	def customImage = docker.build("hybridcloudaccelerators.azurecr.io/eurekaservicemanagement:${commit_id}")
@@ -35,7 +35,7 @@ node
 			sh "docker rmi -f hybridcloudaccelerators.azurecr.io/eurekaservicemanagement:${commit_id}"
 	}
 	
-    }
+    }*/
 	
 	 
 	 /*stage('Kubernetes Prod Deployment'){
